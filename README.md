@@ -27,8 +27,8 @@ Vendor and Order Tracker is a basic MVC application  written in C# utilizing .NE
 
 1. If you don't already have C# and .NET installed on your computer, you can get the Software Develment Kit or SDK for Mac here: https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-macos-x64-installer and for Windows here: https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.102-windows-x64-installer. Follow the instructions given on that page.
 2. Open the terminal on your local machine and navigate to where you want to clone the project
-3. Run the following command: 
-4. Navigate to 
+3. Run the following command: git clone https://github.com/ShanGGraff/VendorOrderTracker.Solution
+4. Navigate to VendorOrderTracker
 5. Run __dotnet build__ on the command line.
 6. If everything builds correctly, run __dotnet run__ on the command line.
 
