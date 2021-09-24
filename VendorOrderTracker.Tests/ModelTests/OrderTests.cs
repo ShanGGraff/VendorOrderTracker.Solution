@@ -12,7 +12,9 @@ namespace VendorOrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order();
+      string title = "Bread";
+      string description = "Wheat";
+      Order newOrder = new Order(title, description);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
