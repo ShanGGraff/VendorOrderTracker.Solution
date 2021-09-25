@@ -14,7 +14,8 @@ namespace VendorOrderTracker.Tests
     {
       string title = "Bread";
       string description = "Wheat";
-      Order newOrder = new Order(title, description);
+      int price = 30;
+      Order newOrder = new Order(title, description, price);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
