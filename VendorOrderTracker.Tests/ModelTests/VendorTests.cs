@@ -13,10 +13,16 @@ namespace VendorOrderTracker.Tests
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
       string vendorName = "Darkstar";
-      Vendor newVendor = new Vendor(vendorName);
+      string vendorDescription = "East location";
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
-  
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithCategory_OrderList()
+    {
+      
+    }
+
   }
 }
