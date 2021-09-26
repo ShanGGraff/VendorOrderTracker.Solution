@@ -14,7 +14,7 @@ namespace VendorOrderTracker.Models
       Title = title;
       Description = description;
       Price = price;
-      Date = date;
+      Date = date; //Look into using date method
     }
     
   }

@@ -21,7 +21,13 @@ namespace VendorOrderTracker.Tests
     [TestMethod]
     public void AddOrder_AssociatesOrderWithCategory_OrderList()
     {
-      
+      //Arrange
+      string title = "Bread";
+      string description = "Wheat";
+      int price = 30;
+      string date = "2021 April 30";
+      Order newOrder = new Category(vendorName, VendorDescription, newVendor);
+      netCategory.AddOrder(newOrder);
     }
 
   }
