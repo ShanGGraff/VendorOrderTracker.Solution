@@ -26,8 +26,14 @@ namespace VendorOrderTracker.Tests
       string description = "Wheat";
       int price = 30;
       string date = "2021 April 30";
-      Order newOrder = new Category(vendorName, VendorDescription, newVendor);
-      netCategory.AddOrder(newOrder);
+      Order newOrder = new Order(title, description, price, date);
+      newOrder.AddOrder(newOrder);
+
+      //Act
+      List<Order> result = newVendor.Order;
+
+      //Assert
+      CollectionAssert.AreEqual(newOrder, result);
     }
 
   }

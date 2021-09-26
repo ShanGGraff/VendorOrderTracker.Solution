@@ -16,7 +16,7 @@ namespace VendorOrderTracker.Tests
       string description = "Wheat";
       int price = 30;
       string date = "2021 April 30";
-      Order newOrder = new Order(title, description, price);
+      Order newOrder = new Order(title, description, price, date);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
