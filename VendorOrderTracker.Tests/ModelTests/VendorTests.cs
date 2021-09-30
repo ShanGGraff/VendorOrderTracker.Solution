@@ -6,7 +6,7 @@ using System;
 namespace VendorOrderTracker.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests 
   {
   
     [TestMethod]
@@ -18,23 +18,27 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
-    [TestMethod]
-    public void AddOrder_AssociatesOrderWithCategory_OrderList()
-    {
-      //Arrange
-      string title = "Bread";
-      string description = "Wheat";
-      int price = 30;
-      string date = "2021 April 30";
-      Order newOrder = new Order(title, description, price, date);
-      newOrder.AddOrder(newOrder);
+    // [TestMethod]
+    // public void AddOrder_AssociatesOrderWithCategory_OrderList()
+    // {
+    //   //Arrange
+    //   string title = "Bread";
+    //   string description = "Wheat";
+    //   int price = 30;
+    //   string date = "2021 April 30";
+    //   Order newOrder = new Order(title, description, price, date);
+    //   List<Vendor> newList = new List<Vendor> { newOrder };
 
-      //Act
-      List<Order> result = newVendor.Order;
+    //   Vendor newVendor = new Vendor();
 
-      //Assert
-      CollectionAssert.AreEqual(newOrder, result);
-    }
+    //   newVendor.AddOrder(newOrder);
+
+    //   //Act
+    //   List<Order> result = newVendor.Order;
+
+    //   //Assert
+    //   CollectionAssert.AreEqual(newOrder, result);
+    // }
 
   }
 }
