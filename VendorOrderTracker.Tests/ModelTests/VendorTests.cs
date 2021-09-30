@@ -40,6 +40,19 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(description, descriptionResult);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_VendorList()
+    {
+      // Arrange
+      List<Vendor> newVendor = new List<Vendor> { };
+
+      // Act
+      List<Vendor> result = Vendor.GetAll();
+
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
+
     // [TestMethod]
     // public void AddOrder_AssociatesOrderWithCategory_OrderList()
     // {
