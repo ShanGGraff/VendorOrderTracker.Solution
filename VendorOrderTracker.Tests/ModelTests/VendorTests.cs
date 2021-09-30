@@ -53,6 +53,26 @@ namespace VendorOrderTracker.Tests
       CollectionAssert.AreEqual(newVendor, result);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsVendor_VendorList()
+    {
+      //Arrange
+      string name01 = "Darkstar";
+      string description01 = "Emerson St";
+      string name02 = "Lightstar";
+      string description02 = "Killingsworth";
+
+      Vendor newVendor1 = new Vendor(name01, description01);
+      Vendor newVendor2 = new Vendor(name02, description02);
+      List<Vendor> newVendor = new List<Vendor> { newVendor1, newVendor2 };
+
+      //Act
+      List<Vendor> result = Vendor.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newVendor, result);
+    }
+
     // [TestMethod]
     // public void AddOrder_AssociatesOrderWithCategory_OrderList()
     // {
