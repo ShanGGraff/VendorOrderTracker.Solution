@@ -73,6 +73,23 @@ namespace VendorOrderTracker.Tests
       CollectionAssert.AreEqual(newVendor, result);
     }
 
+    [TestMethod]
+    public void GetId_VendorInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      //Arrange
+      string name = "Darkstar";
+      string description = "Emerson St";
+      Vendor newVendor = new Vendor(name, description);
+
+      //Act
+      int result = newVendor.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
+
+
+
     // [TestMethod]
     // public void AddOrder_AssociatesOrderWithCategory_OrderList()
     // {
