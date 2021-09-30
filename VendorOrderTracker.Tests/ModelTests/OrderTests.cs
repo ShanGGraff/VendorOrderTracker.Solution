@@ -20,5 +20,28 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
+    [TestMethod]
+    public void GetTitleDescriptionDate_ReturnsTitleDescriptionDate_String_Int()
+    {
+      //Arrange
+      string title = "Bread";
+      string description = "Wheat";
+      int price = 30;
+      string date = "2021 April 30";
+      
+      //Act
+      Order newOrder = new Order(title, description, price, date);
+      string titleResult = newOrder.Title;
+      string descriptionResult = newOrder.Description;
+      int priceResult = newOrder.Price;
+      string dateResult = newOrder.Date;
+
+      //Assert
+      Assert.AreEqual(title, titleResult);
+      Assert.AreEqual(description, descriptionResult);
+      Assert.AreEqual(price, priceResult);
+      Assert.AreEqual(date, dateResult);
+    }
+
   }
 }
