@@ -88,29 +88,24 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      //Arrange
+      string name01 = "Darkstar";
+      string description01 = "Emerson St";
+      string name02 = "Lightstar";
+      string description02 = "Killingsworth";
 
+      Vendor newVendor1 = new Vendor(name01, description01);
+      Vendor newVendor2 = new Vendor(name02, description02);
 
-    // [TestMethod]
-    // public void AddOrder_AssociatesOrderWithCategory_OrderList()
-    // {
-    //   //Arrange
-    //   string title = "Bread";
-    //   string description = "Wheat";
-    //   int price = 30;
-    //   string date = "2021 April 30";
-    //   Order newOrder = new Order(title, description, price, date);
-    //   List<Vendor> newList = new List<Vendor> { newOrder };
+      //Act
+      Vendor result = Vendor.Find(2);
 
-    //   Vendor newVendor = new Vendor();
-
-    //   newVendor.AddOrder(newOrder);
-
-    //   //Act
-    //   List<Order> result = newVendor.Order;
-
-    //   //Assert
-    //   CollectionAssert.AreEqual(newOrder, result);
-    // }
+      //Assert
+      Assert.AreEqual(newVendor2, result);
+    }
 
   }
 }
