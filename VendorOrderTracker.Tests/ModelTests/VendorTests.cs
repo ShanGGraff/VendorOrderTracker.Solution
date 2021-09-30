@@ -6,13 +6,13 @@ using System;
 namespace VendorOrderTracker.Tests
 {
   [TestClass]
-  public class VendorTests //: IDisposable
+  public class VendorTests : IDisposable
   {
 
-    // public void Dispose()
-    // {
-    //   Vendor.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
   
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
@@ -50,7 +50,7 @@ namespace VendorOrderTracker.Tests
       List<Vendor> result = Vendor.GetAll();
 
       // Assert
-      CollectionAssert.AreEqual(newList, result);
+      CollectionAssert.AreEqual(newVendor, result);
     }
 
     // [TestMethod]
