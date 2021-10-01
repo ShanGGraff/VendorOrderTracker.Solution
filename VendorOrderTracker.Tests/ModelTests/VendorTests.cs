@@ -123,7 +123,7 @@ namespace VendorOrderTracker.Tests
       newVendor.AddOrder(newOrder);
 
       //Act
-      List<Order> result = newCategory.Orders;
+      List<Order> result = newVendor.Orders;
 
       //Assert
       CollectionAssert.AreEqual(newList, result);
