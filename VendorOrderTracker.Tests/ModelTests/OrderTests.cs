@@ -103,5 +103,29 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      string title = "Bread";
+      string description = "Wheat";
+      int price = 30;
+      string date = "2021 April 30";
+
+      string title2 = "Pastry";
+      string description2 = "Chocolate";
+      int price2 = 12;
+      string date2 = "2020 May 30";
+
+      Order newOrder1 = new Order(title, description, price, date);
+      Order newOrder2 = new Order(title2, description2, price2, date2);
+
+      //Act
+      Item result = Item.Find(2);
+
+      //Assert
+      Assert.AreEqual(newOrder2, result);
+    }
+
   }
 }
