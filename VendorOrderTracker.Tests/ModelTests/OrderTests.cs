@@ -75,8 +75,8 @@ namespace VendorOrderTracker.Tests
       int price2 = 12;
       string date2 = "2020 May 30";
 
-      Item newOrder1 = new Item(title, description, price, date);
-      Item newOrder2 = new Item(title2, description2, price2, date2);
+      Order newOrder1 = new Order(title, description, price, date);
+      Order newOrder2 = new Order(title2, description2, price2, date2);
       List<Order> newOrder = new List<Order> { newOrder1, newOrder2 };
 
       //Act
@@ -84,6 +84,23 @@ namespace VendorOrderTracker.Tests
 
       //Assert
       CollectionAssert.AreEqual(newOrder, result);
+    }
+
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      //Arrange
+      string title = "Bread";
+      string description = "Wheat";
+      int price = 30;
+      string date = "2021 April 30";
+      Order newOrder = new Order(title, description, price, date);
+
+      //Act
+      int result = newOrder.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
     }
 
   }
