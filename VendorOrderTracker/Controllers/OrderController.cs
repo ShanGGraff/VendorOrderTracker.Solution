@@ -7,31 +7,11 @@ namespace VendorOrderTracker.Controllers
   public class OrderController : Controller
   {
 
-    [HttpGet("/orders")]
-    public ActionResult Index()
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
     {
-      List<Order> allOrders = Order.GetAll();
-      return View(allOrders);
-    }
-
-    [HttpGet("/orders/new")]
-    public ActionResult New()//CreateForm()
-    {
-      return View();
-    }
-
-    [HttpPost("/orders")]
-    public ActionResult Create(string title, string description,int price, string date )
-    {     
-      Order myOrder = new Order(title, description, price, date);
-      return RedirectToAction("Index");
-    }
-
-    [HttpGet("/orders/{id}")]
-    public ActionResult Show(int id)
-    {
-      Order foundOrder = Order.Find(id);
-      return View(foundOrder);
+      Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
     }
 
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
@@ -44,15 +24,6 @@ namespace VendorOrderTracker.Controllers
       model.Add("vendor", vendor);
       return View(model);
     }
-
-    [HttpGet("/vendors/{vendorId}/orders/new")]
-    public ActionResult New(int vendorId)
-    {
-      Vendor vendor = Vendor.Find(vendorId);
-      return View(vendor);
-    }
-
-
 
   }
 }

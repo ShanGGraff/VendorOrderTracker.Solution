@@ -1,6 +1,6 @@
 <h1>Add a new order to @Model.Name</h1>
 
-<form action="/orders/@Model.Id/orders" method="post">
+<form action="/vendors/@Model.Id/orders" method="post">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
   <label for="orderTitle">Add the title for the new order:</label>
   <input id="orderTitle" name="orderTitle" type="text">
